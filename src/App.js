@@ -6,7 +6,6 @@ import MyProfile from './components/MyProfile';
 import Missions from './components/Missions';
 import Rockets from './components/Rockets';
 
-
 const App = () => (
   <>
     <header>
@@ -16,13 +15,12 @@ const App = () => (
       </div>
       <Navbar />
     </header>
-      <Routes>
-        <Route path="/profile" element={<MyProfile />}></Route>
-        <Route path="/missions" element={<Missions />}></Route>
-        <Route path="/" element={<Rockets />} />
-      </Routes>
-    </>
-  );
-};
+    <Routes>
+      <Route path="/profile" element={<MyProfile />} />
+      <Route path="/missions" element={<Missions />} />
+      <Route path="/" element={<Rockets />} />
+    </Routes>
+  </>
+);
 
 export default App;
