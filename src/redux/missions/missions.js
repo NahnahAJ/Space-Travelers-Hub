@@ -18,7 +18,7 @@ export const fetchMissions = createAsyncThunk(
 
 const initialState = {
   isLoading: true,
-  missions: {},
+  missions: [],
 };
 
 const createApiSlice = createSlice(
