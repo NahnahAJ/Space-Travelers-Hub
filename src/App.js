@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import logo from './images/planet.png';
+import MyProfile from './components/MyProfile';
 
 const App = () => {
   return (
@@ -14,7 +15,9 @@ const App = () => {
         <Navbar />
       </header>
 
-      <Routes></Routes>
+      <Routes>
+        <Route path="/profile" element={<MyProfile />}></Route>
+      </Routes>
     </>
   );
 };
