@@ -3,23 +3,23 @@ import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import logo from './images/planet.png';
 import MyProfile from './components/MyProfile';
+import Rockets from './components/Rockets';
 
-const App = () => {
-  return (
-    <>
-      <header>
-        <div>
-          <img src={logo} alt="logo" />
-          <h1>Space Travelers' Hub</h1>
-        </div>
-        <Navbar />
-      </header>
+const App = () => (
+  <>
+    <header>
+      <div>
+        <img src={logo} alt="logo" />
+        <h1>Space Travelers&apos; Hub</h1>
+      </div>
+      <Navbar />
+    </header>
 
-      <Routes>
-        <Route path="/profile" element={<MyProfile />}></Route>
-      </Routes>
-    </>
-  );
-};
+    <Routes>
+      <Route path="/profile" element={<MyProfile />} />
+      <Route path="/" element={<Rockets />} />
+    </Routes>
+  </>
+);
 
 export default App;
