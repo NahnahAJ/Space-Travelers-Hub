@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import logo from './images/planet.png';
 import MyProfile from './components/MyProfile';
+import Missions from './components/Missions';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
 
       <Routes>
         <Route path="/profile" element={<MyProfile />}></Route>
+        <Route path="/missions" element={<Missions />}></Route>
       </Routes>
     </>
   );
