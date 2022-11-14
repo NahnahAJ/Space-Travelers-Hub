@@ -50,9 +50,9 @@ To get a local copy up and running follow these simple example steps.
 
 👤 **Nahnah Ahjuwah**
 
-- GitHub: [@githubhandle](https://github.com/NahnahAJ)
-- Twitter: [@twitterhandle](https://https://twitter.com/NahnahAhjuwah)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/felicia-awuah-0674a7152/)
+- GitHub: [@NahnahAJ](https://github.com/NahnahAJ)
+- Twitter: [@NahnahAhjuwah](https://https://twitter.com/NahnahAhjuwah)
+- LinkedIn: [Felicia-Awuah](https://www.linkedin.com/in/felicia-awuah-0674a7152/)
 
 ## 🤝 Contributing
 
