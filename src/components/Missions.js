@@ -11,10 +11,9 @@ const Missions = () => {
     if (fetchMissions.isLoading === false) {
       dispatch(fetchMissions());
     }
-  }, [fetchMissions.isLoading, dispatch]);
+  }, [dispatch]);
 
   const receivedMissions = newMissions.missions;
-  console.log(receivedMissions);
   return (
     <>
       <Table striped bordered hover>
