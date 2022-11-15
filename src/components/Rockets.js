@@ -1,34 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { asyncGetRockets } from '../redux/rockets/rocketsSlice';
 import Rocket from './Rocket';
 
 const Rockets = () => {
-  const SamplesArr = [
-    {
-      rocketName: 'Rocket 1',
-      rocketDescription: 'This is a sample rocket',
-      index: 1,
-    },
-    {
-      rocketName: 'Rocket 2',
-      rocketDescription: 'This is a sample rocket',
-      index: 2,
-    },
-    {
-      rocketName: 'Rocket 3',
-      rocketDescription: 'This is a sample rocket',
-      index: 3,
-    },
-    {
-      rocketName: 'Rocket 4',
-      rocketDescription: 'This is a sample rocket',
-      index: 4,
-    },
-  ];
+  const rockets = useSelector((state) => state.rockets.rockets);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(asyncGetRockets());
+  }, []);
+
   return (
     <div>
       <ul>
-        {SamplesArr.map((rocket) => (
-          <Rocket key={rocket.index} rocket={rocket} />
+        {rockets.map((rocket) => (
+          <Rocket key={rocket.id} rocket={rocket} />
         ))}
       </ul>
     </div>

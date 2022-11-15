@@ -1,5 +1,5 @@
-import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import React from 'react';
 import Navbar from './components/Navbar';
 import logo from './images/planet.png';
 import MyProfile from './components/MyProfile';
