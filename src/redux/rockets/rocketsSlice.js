@@ -22,7 +22,7 @@ export const asyncGetRockets = createAsyncThunk(
 
 const rocketsSlice = createSlice({
   name: 'rocketsReducer',
-  initialState: initialState,
+  initialState,
   reducers: [],
   extraReducers: {
     [asyncGetRockets.fulfilled]: (state, action) => {
