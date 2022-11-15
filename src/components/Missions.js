@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Table } from 'react-bootstrap';
+import { Table, Button } from 'react-bootstrap';
 import { fetchMissions } from '../redux/missions/missions';
 
 const Missions = () => {
@@ -23,7 +23,6 @@ const Missions = () => {
             <th>Mission</th>
             <th>Description</th>
             <th>Status</th>
-            <th>Username</th>
           </tr>
         </thead>
         <tbody>
@@ -32,10 +31,10 @@ const Missions = () => {
               <td>{mission.mission_name}</td>
               <td>{mission.description}</td>
               <td>
-                <button type="button">Not a member</button>
+                <Button variant="secondary" type="button">Not a member</Button>
               </td>
               <td>
-                <button type="button">Join Mission</button>
+                <Button variant="outline-dark" type="button">Join Mission</Button>
               </td>
             </tr>
           ))}
