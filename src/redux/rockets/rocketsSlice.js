@@ -12,16 +12,53 @@ const initialState = {
 export const asyncGetRockets = createAsyncThunk(GET_ROCKETS, async () => {
   try {
     const response = await axios.get(URL);
-    return response.data;
+    const rocketsFromAPI = [];
+    response.data.forEach((data) => {
+      const {
+        id,
+        rocket_name: rocketName,
+        description,
+        flickr_images: flickrImages,
+      } = data;
+
+      const newRocket = {
+        id,
+        rocketName,
+        description,
+        flickrImages,
+        reserved: false,
+      };
+      rocketsFromAPI.push(newRocket);
+    });
+    return rocketsFromAPI;
   } catch (error) {
     return error;
   }
 });
 
 const rocketsSlice = createSlice({
-  name: 'rocketsReducer',
+  name: 'rockets',
   initialState,
-  reducers: [],
+  reducers: {
+    bookRocket: (state, action) => ({
+      ...state,
+      rockets: state.rockets.map((rocket) => {
+        if (rocket.id !== action.payload) {
+          return rocket;
+        }
+        return { ...rocket, reserved: true };
+      }),
+    }),
+    cancelRocketBooking: (state, action) => ({
+      ...state,
+      rockets: state.rockets.map((rocket) => {
+        if (rocket.id !== action.payload) {
+          return rocket;
+        }
+        return { ...rocket, reserved: false };
+      }),
+    }),
+  },
   extraReducers: {
     [asyncGetRockets.fulfilled]: (state, action) => {
       state.rockets = action.payload;
@@ -35,5 +72,7 @@ const rocketsSlice = createSlice({
     },
   },
 });
+
+export const { bookRocket, cancelRocketBooking } = rocketsSlice.actions;
 
 export default rocketsSlice.reducer;
