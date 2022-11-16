@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { propTypes } from 'prop-types';
+// import PropTypes from 'prop-types';
 import { bookRocket, cancelRocketBooking } from '../redux/rockets/rocketsSlice';
 
 function Rocket(props) {
@@ -36,14 +37,14 @@ function Rocket(props) {
   );
 }
 
-Rocket.propTypes = {
-  rocket: propTypes.objectOf({
-    id: propTypes.number.isRequired,
-    rocketName: propTypes.string.isRequired,
-    description: propTypes.string.isRequired,
-    flickrImages: propTypes.array.isRequired,
-    reserved: propTypes.bool.isRequired,
-  }).isRequired,
-};
+// Rocket.propTypes = {
+//   rocket: {
+//     id: PropTypes.number.isRequired,
+//     rocketName: PropTypes.string.isRequired,
+//     description: PropTypes.string.isRequired,
+//     flickrImages: PropTypes.array.isRequired,
+//     reserved: PropTypes.bool.isRequired,
+//   }.isRequired,
+// };
 
 export default Rocket;
