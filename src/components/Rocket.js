@@ -6,7 +6,9 @@ import { bookRocket, cancelRocketBooking } from '../redux/rockets/rocketsSlice';
 function Rocket(props) {
   const dispatch = useDispatch();
   const { rocket } = props;
-  const { id, rocketName, description, flickrImages, reserved } = rocket;
+  const {
+    id, rocketName, description, flickrImages, reserved,
+  } = rocket;
 
   return (
     <li>
