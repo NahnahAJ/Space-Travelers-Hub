@@ -3,8 +3,12 @@
 exports[`renders the navbar component snapshot 1`] = `
 <DocumentFragment>
   <nav>
-    <ul>
-      <li>
+    <ul
+      class="navbarContainer"
+    >
+      <li
+        class="navLink"
+      >
         <a
           aria-current="page"
           class="active"
@@ -13,7 +17,9 @@ exports[`renders the navbar component snapshot 1`] = `
           Rockets
         </a>
       </li>
-      <li>
+      <li
+        class="navLink"
+      >
         <a
           class=""
           href="/missions"
@@ -21,7 +27,9 @@ exports[`renders the navbar component snapshot 1`] = `
           Missions
         </a>
       </li>
-      <li>
+      <li
+        class="navLink profileNav"
+      >
         <a
           class=""
           href="/profile"
