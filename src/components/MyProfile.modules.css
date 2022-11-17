@@ -1,0 +1,10 @@
+.myProfile {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.myMissions,
+.myRockets {
+  width: 35rem;
+}

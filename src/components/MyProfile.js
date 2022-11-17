@@ -2,8 +2,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Table } from 'react-bootstrap';
+import './MyProfile.modules.css';
 
-export default function MyProfile() {
+const MyProfile = () => {
   const res = (state) => {
     if (state.reserved === true) {
       return { ...state, reserved: true };
@@ -17,8 +18,8 @@ export default function MyProfile() {
   const newArray = currentState.filter(res);
 
   return (
-    <div>
-      <div>
+    <div className="myProfile">
+      <div className="myMissions">
         <h4>My Missions</h4>
         <Table bordered hover>
           <tbody>
@@ -30,7 +31,7 @@ export default function MyProfile() {
           </tbody>
         </Table>
       </div>
-      <div>
+      <div className="myRockets">
         <h4>My Rockets</h4>
         <Table bordered hover>
           <tbody>
@@ -46,4 +47,6 @@ export default function MyProfile() {
       </div>
     </div>
   );
-}
+};
+
+export default MyProfile;
