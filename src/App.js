@@ -9,17 +9,20 @@ import Rockets from './components/Rockets';
 const App = () => (
   <>
     <header>
-      <div>
-        <img src={logo} alt="logo" />
-        <h1>Space Travelers&apos; Hub</h1>
+      <div className="logoContainer">
+        <img src={logo} alt="logo" width={50} height={50} />
+        <h1 className="appHeading">Space Travelers&apos; Hub</h1>
       </div>
       <Navbar />
     </header>
-    <Routes>
-      <Route path="/profile" element={<MyProfile />} />
-      <Route path="/missions" element={<Missions />} />
-      <Route path="/" element={<Rockets />} />
-    </Routes>
+    <hr />
+    <div className="mainAppContainer">
+      <Routes>
+        <Route path="/profile" element={<MyProfile />} />
+        <Route path="/missions" element={<Missions />} />
+        <Route path="/" element={<Rockets />} />
+      </Routes>
+    </div>
   </>
 );
 

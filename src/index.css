@@ -4,6 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  transition: 0.4s;
 }
 
 ul li a {
@@ -13,4 +14,29 @@ ul li a {
 .active {
   font-weight: bold;
   text-decoration: underline;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.navbarContainer {
+  display: flex;
+}
+
+.appHeading {
+  padding-left: 1.5rem;
+}
+
+.mainAppContainer {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }

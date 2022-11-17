@@ -1,0 +1,16 @@
+.navbarContainer {
+  display: flex;
+  list-style: none;
+  height: 100%;
+  padding-right: 1rem;
+}
+
+.navLink {
+  display: flex;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.profileNav {
+  border-left: 2px solid black;
+}
