@@ -1,24 +1,18 @@
 import React from 'react';
+import '@testing-library/jest-dom';
 import { Provider } from 'react-redux';
-import store from '../redux/configureStore';
 import { render, screen } from '@testing-library/react';
+import store from '../redux/configureStore';
 import Rockets from '../components/Rockets';
 
-const renderRockets = () =>
-  render(
-    <Provider store={store}>
-      <Rockets />
-    </Provider>,
-  );
+const renderRockets = () => render(
+  <Provider store={store}>
+    <Rockets />
+  </Provider>,
+);
 
 test('Rockets list is visible', () => {
   renderRockets();
   const rockets = screen.getByTestId('rocketList');
-  expect(rockets).toBeInTheDocument;
-});
-
-test('Rockets are visible after on load', () => {
-  renderRockets();
-  const rocket = screen.findAllByTestId('rocket');
-  expect(rocket).toBeInTheDocument;
+  expect(rockets).toBeInTheDocument();
 });

@@ -14,7 +14,6 @@ const Rockets = () => {
     }
   }, [dispatch, rockets.length]);
 
-  console.log(rockets);
   return (
     <div>
       <ul className={style.rocketsContainer} data-testid="rocketList">
