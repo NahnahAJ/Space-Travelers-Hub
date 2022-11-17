@@ -1,23 +1,20 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { useDispatch } from 'react-redux';
-// import PropTypes from 'prop-types';
 import { bookRocket, cancelRocketBooking } from '../redux/rockets/rocketsSlice';
 import style from '../styles/Rocket.module.css';
 
 function Rocket(props) {
   const dispatch = useDispatch();
   const { rocket } = props;
-  const {
-    id, rocketName, description, flickrImages, reserved,
-  } = rocket;
+  const { id, rocketName, description, flickrImages, reserved } = rocket;
 
   return (
     <li className={style.rocket}>
       <img src={flickrImages[0]} alt="rockets" width={300} height={220} />
       <div>
         <h4>{rocketName}</h4>
-        <p>
+        <p data-testid="testBadge">
           {reserved ? <span className={style.badge}>reserved</span> : null}
           {description}
         </p>
@@ -42,15 +39,5 @@ function Rocket(props) {
     </li>
   );
 }
-
-// Rocket.propTypes = {
-//   rocket: {
-//     id: PropTypes.number.isRequired,
-//     rocketName: PropTypes.string.isRequired,
-//     description: PropTypes.string.isRequired,
-//     flickrImages: PropTypes.array.isRequired,
-//     reserved: PropTypes.bool.isRequired,
-//   }.isRequired,
-// };
 
 export default Rocket;
