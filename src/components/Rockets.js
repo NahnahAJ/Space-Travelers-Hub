@@ -14,11 +14,12 @@ const Rockets = () => {
     }
   }, [dispatch, rockets.length]);
 
+  console.log(rockets);
   return (
     <div>
-      <ul className={style.rocketsContainer}>
+      <ul className={style.rocketsContainer} data-testid="rocketList">
         {rockets.map((rocket) => (
-          <Rocket key={rocket.id} rocket={rocket} />
+          <Rocket key={rocket.id} rocket={rocket} data-testid="rocket" />
         ))}
       </ul>
     </div>
